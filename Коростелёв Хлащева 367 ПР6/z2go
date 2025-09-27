@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+var cache = make(map[string]string)
+
+func get(kluch string) string {
+    return cache[kluch]
+}
+
+func set(kluch, v string) {
+    cache[kluch] = v
+}
+
+func main() {
+    set("odin", "info")
+    fmt.Println(get("odin"))
+}
